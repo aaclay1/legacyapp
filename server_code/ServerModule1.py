@@ -67,3 +67,8 @@ def delete_blog(entry):
     entry.delete()
   else:
     raise Exception("Entry does not exist")
+
+@anvil.server.callable
+def get_column_data():
+  rows = app_tables.entries.search()
+  return [{'name': row['firstName']} for row in rows]

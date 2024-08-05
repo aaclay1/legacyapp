@@ -1,6 +1,7 @@
 /**
  This CSS implements the Material Design 3 look and feel for Anvil apps.
  **/
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 
 /* Stop panel-cols cutting off drop shadows */
 .anvil-panel-col {
@@ -1046,8 +1047,6 @@ div.plot-container.plotly svg.main-svg {
   box-shadow: 0px 0px 100px 100px %color:Surface Variant%;
 }
 
-.allura-regular {
-  font-family: "Allura", cursive;
-  font-weight: 400;
-  font-style: normal;
+.anvil-role-allura-font {
+    font-family: 'Allura', cursive;
 }

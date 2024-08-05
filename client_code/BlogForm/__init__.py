@@ -4,6 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ..PasscodeForm import PasscodeForm
 
 
 class BlogForm(BlogFormTemplate):
@@ -38,5 +39,13 @@ class BlogForm(BlogFormTemplate):
     pass
 
   def editbutton_click(self, **event_args):
-    open_form('BlogHome')
-  pass
+    # Open the PasscodeForm as a custom alert
+    passcode_form = PasscodeForm()
+    passcode = alert(content=passcode_form, buttons=[], large=True)
+    
+    # Handle the passcode
+    if passcode == ".":
+      open_form('BlogHome')
+    else:
+      alert("Incorrect passcode.")
+    pass

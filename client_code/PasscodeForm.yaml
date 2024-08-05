@@ -1,0 +1,27 @@
+is_package: false
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: label_1
+    properties: {text: 'What is the passcode?'}
+    type: Label
+    layout_properties: {grid_position: 'QNPNIW,FWLFXI'}
+  - name: text_box_passcode
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'MTKKUH,XEWIGC'}
+  - name: button_submit
+    properties: {text: Submit}
+    type: Button
+    layout_properties: {grid_position: 'NLLXVL,UGFHHR'}
+    event_bindings: {click: button_submit_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
