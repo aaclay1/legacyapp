@@ -71,7 +71,7 @@ db_schema:
       type: string
     title: Blogs
 startup: {type: form, module: HomeForm}
-name: Database-backed app (2)
+name: TheJudsonLegacyProject
 startup_form: null
 correct_dependency_ids: {}
 renamed: true
@@ -86,3 +86,4 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
+metadata: {title: The Judson Legacy Project, description: The Judson Legacy Project, logo_img: 'asset:AdoniramAndAnnJudson.jpg'}
