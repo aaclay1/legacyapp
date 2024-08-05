@@ -6,7 +6,6 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import alert
 from ..PasscodeForm import PasscodeForm
-from ..RowTemplate import RowTemplate
 
 
 class NotationsForm(NotationsFormTemplate):
@@ -15,10 +14,6 @@ class NotationsForm(NotationsFormTemplate):
     self.init_components(**properties)
     self.refresh_entries()
 
-    rows = anvil.server.call('get_column_data')
-
-    # Set the items property of the RepeatingPanel to the queried data
-    self.repeating_panel_1.items = rows
   def nav_home_click(self, **event_args):
     open_form("HomeForm")
     pass
@@ -37,7 +32,7 @@ class NotationsForm(NotationsFormTemplate):
 
   def refresh_entries(self):
      self.entries_panel.items = anvil.server.call('get_entries')
-    
+     self.entries_panel1.items = anvil.server.call('get_entries')
   def nav_blog_click(self, **event_args):
     open_form('BlogForm')
     pass

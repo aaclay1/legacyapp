@@ -27,7 +27,7 @@ components:
       layout_properties: {}
       event_bindings: {click: delete_entry_button_click}
   - name: fullName_box
-    properties: {role: title, bold: false, align: left, spacing_above: none, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: none, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+    properties: {role: null, bold: true, align: left, spacing_above: none, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: none, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: ''}
     type: Label
     layout_properties: {grid_position: 'MHWRRD,XGUAPS UKOZVZ,ENCBAZ'}
     data_bindings:
