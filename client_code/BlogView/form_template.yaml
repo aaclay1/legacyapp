@@ -3,7 +3,7 @@ container:
   properties: {col_widths: '{}'}
 components:
 - type: ColumnPanel
-  properties: {role: null, col_widths: '{"YQCVDA":30,"TAHOSC":15,"PUZFVR":3,"XGUAPS":74,"UGUKIZ":3}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: 1px solid black, tooltip: ''}
+  properties: {role: null, col_widths: '{"TAHOSC":15,"PUZFVR":3,"XGUAPS":74,"UGUKIZ":3}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: 1px solid black, tooltip: ''}
   name: column_panel_1
   layout_properties: {grid_position: 'PAFXYP,FWHHIW'}
   components:
@@ -26,12 +26,18 @@ components:
       name: delete_entry_button
       layout_properties: {}
       event_bindings: {click: delete_entry_button_click}
-  - name: fullName_box
+  - name: DateAndAuthor_box
     properties: {role: title, bold: false, align: left, spacing_above: none, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: none, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
     type: Label
     layout_properties: {grid_position: 'MHWRRD,XGUAPS UKOZVZ,ENCBAZ'}
     data_bindings:
-    - {property: text, code: 'str(self.item[''startYear'']) + ''-'' + str(self.item[''endYear''])+''   '' + self.item[''firstName''] + '' '' + self.item[''middleName'']+ '' '' + self.item[''lastName'']+ ''   '' + self.item[''occupation'']+ ''   '' + self.item[''geoLocation'']', writeback: false}
+    - {property: text, code: 'str(self.item[''created''].strftime(''%Y-%m-%d %H:%M'')) + '' '' + self.item[''author'']', writeback: false}
+  - name: heading_box
+    properties: {role: title, bold: false, align: left, spacing_above: none, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: none, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+    type: Label
+    layout_properties: {grid_position: 'MHWRRD,XGUAPS KCASTD,BNUVDE'}
+    data_bindings:
+    - {property: text, code: 'self.item[''heading'']', writeback: false}
   - type: Image
     properties: {role: null, vertical_align: center, spacing_above: none, background: '', horizontal_align: center, source: '', foreground: '', display_mode: fill_width, spacing_below: none, visible: true, border: '', tooltip: '', height: '200'}
     name: image_1

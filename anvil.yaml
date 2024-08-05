@@ -1,21 +1,13 @@
 allow_embedding: false
 package_name: News_App
 db_schema:
-  categories:
-    title: Categories
-    client: search
-    server: full
-    columns:
-    - name: name
-      admin_ui: {width: 200}
-      type: string
   entries:
     title: Entries
     client: search
     server: full
     columns:
-    - name: title
-      admin_ui: {width: 200}
+    - name: firstName
+      admin_ui: {order: 0, width: 200}
       type: string
     - name: content
       admin_ui: {width: 200}
@@ -29,11 +21,56 @@ db_schema:
     - name: updated
       admin_ui: {width: 200}
       type: datetime
-    - name: category
+    - name: startYear
+      admin_ui: {order: -1, width: 200}
+      type: number
+    - name: endYear
+      admin_ui: {order: -0.5, width: 200}
+      type: number
+    - name: middleName
+      admin_ui: {width: 200, order: 0.5}
+      type: string
+    - name: lastName
+      admin_ui: {order: 0.75, width: 200}
+      type: string
+    - name: occupation
+      admin_ui: {order: 0.875, width: 200}
+      type: string
+    - name: geoLocation
+      admin_ui: {order: 0.9375, width: 200}
+      type: string
+  categories:
+    title: Categories
+    client: search
+    server: full
+    columns:
+    - name: name
       admin_ui: {width: 200}
-      type: link_single
-      target: categories
-startup: {type: form, module: Homepage}
+      type: string
+  blogs:
+    client: none
+    server: full
+    columns:
+    - name: created
+      admin_ui: {order: 4, width: 200}
+      type: datetime
+    - name: updated
+      admin_ui: {order: 5, width: 200}
+      type: datetime
+    - name: image
+      admin_ui: {width: 200, order: 2}
+      type: media
+    - name: content
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: author
+      admin_ui: {order: 1, width: 200}
+      type: string
+    - name: heading
+      admin_ui: {order: 1.5, width: 200}
+      type: string
+    title: Blogs
+startup: {type: form, module: HomeForm}
 name: Database-backed app (2)
 startup_form: null
 correct_dependency_ids: {}

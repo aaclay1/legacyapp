@@ -1046,3 +1046,8 @@ div.plot-container.plotly svg.main-svg {
   box-shadow: 0px 0px 100px 100px %color:Surface Variant%;
 }
 
+.allura-regular {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

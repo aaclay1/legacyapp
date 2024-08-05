@@ -28,12 +28,12 @@ components:
       font_size: null
       tooltip: ''
       text: |
-        Add an Entry
+        Add an Blog
     name: add_entry_button
     layout_properties: {grid_position: 'CBFHGL,NKFPMX'}
     event_bindings: {click: add_entry_button_click}
   - type: RepeatingPanel
-    properties: {role: null, spacing_above: small, background: '', item_template: EntryView, foreground: '', items: null, spacing_below: small, visible: true, border: '', tooltip: ''}
+    properties: {role: null, spacing_above: small, background: '', item_template: BlogView, foreground: '', items: null, spacing_below: small, visible: true, border: '', tooltip: ''}
     name: entries_panel
     layout_properties: {slot: title, grid_position: 'XRGDXR,JQCHKL'}
 - type: FlowPanel
@@ -41,6 +41,6 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
 - type: Label
-  properties: {role: title, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Database-backed app}
+  properties: {role: title, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Edit Blog}
   name: label_1
   layout_properties: {slot: title}
