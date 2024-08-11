@@ -8,6 +8,10 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - name: label_1
+    properties: {text: 'To bulk upload Entries, Click the ''Upload'' button and select a ''csv'' file with the following headings: ''startYear'',''endYear'',''firstName'',''middleName'',''lastName'',''occupation'',''geoLocation'',''content''. Each Row will be a new entry.'}
+    type: Label
+    layout_properties: {grid_position: 'KQYZOY,AUOIMZ'}
   - name: EntryImport
     properties: {}
     type: FileLoader

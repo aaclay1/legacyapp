@@ -37,7 +37,7 @@ components:
     layout_properties: {grid_position: 'STMHCM,LPBKOF'}
     event_bindings: {click: nav_about_click}
   - name: nav_notations
-    properties: {text: Notations, bold: true, icon: 'fa:th-list', foreground: 'theme:On Secondary Container'}
+    properties: {text: Entries, bold: true, icon: 'fa:th-list', foreground: 'theme:On Secondary Container'}
     type: Button
     layout_properties: {grid_position: 'STMHCM,EDZDRS'}
     event_bindings: {click: nav_notations_click}

@@ -8,6 +8,31 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - name: nav_home
+    properties: {text: Home, bold: true, icon: 'fa:home', foreground: 'theme:On Secondary Container'}
+    type: Button
+    layout_properties: {grid_position: 'DRZMPD,CYYWHS'}
+    event_bindings: {click: nav_home_click}
+  - name: nav_about
+    properties: {text: About, bold: true, icon: 'fa:info-circle', foreground: 'theme:On Secondary Container'}
+    type: Button
+    layout_properties: {grid_position: 'DRZMPD,PPLGMH'}
+    event_bindings: {click: nav_about_click}
+  - name: nav_notations
+    properties: {text: Entries, bold: true, icon: 'fa:th-list', foreground: 'theme:On Secondary Container'}
+    type: Button
+    layout_properties: {grid_position: 'DRZMPD,ADZYHL'}
+    event_bindings: {click: nav_notations_click}
+  - name: nav_search
+    properties: {text: Search, bold: true, icon: 'fa:search', foreground: 'theme:On Secondary Container', role: null}
+    type: Button
+    layout_properties: {grid_position: 'DRZMPD,OCBISD'}
+    event_bindings: {click: nav_search_click}
+  - name: nav_blog
+    properties: {text: Blog, icon: 'fa:sticky-note', foreground: 'theme:On Secondary Container'}
+    type: Button
+    layout_properties: {grid_position: 'DRZMPD,KWRZKR'}
+    event_bindings: {click: nav_blog_click}
   - type: Button
     properties:
       role: filled-button
