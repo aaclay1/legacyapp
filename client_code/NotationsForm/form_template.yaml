@@ -55,10 +55,14 @@ components:
     properties: {text: ENTRIES, bold: true, align: center, border: 1px solid black}
     type: Label
     layout_properties: {grid_position: 'WUXVGC,EMSSXC'}
+  - name: label_result
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'RYXKBP,YGDARZ KBCUTN,MFVLFA'}
   - name: entries_panel
     properties: {item_template: EntryViewOnly}
     type: RepeatingPanel
-    layout_properties: {grid_position: 'RYXKBP,YGDARZ'}
+    layout_properties: {grid_position: 'RYXKBP,YGDARZ RHZAUK,WXJTZC'}
   - name: entries_panel1
     properties: {item_template: NotationViewOnly}
     type: RepeatingPanel

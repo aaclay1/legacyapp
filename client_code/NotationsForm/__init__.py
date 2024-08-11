@@ -33,6 +33,7 @@ class NotationsForm(NotationsFormTemplate):
   def refresh_entries(self):
      self.entries_panel.items = anvil.server.call('get_entries')
      self.entries_panel1.items = anvil.server.call('get_entries')
+
   def nav_blog_click(self, **event_args):
     open_form('BlogForm')
     pass
