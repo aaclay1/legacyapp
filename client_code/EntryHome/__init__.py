@@ -42,3 +42,26 @@ class EntryHome(EntryHomeTemplate):
     # Refresh entry to remove the deleted entry from the Homepage
     self.refresh_entries()
 
+  def nav_home_click(self, **event_args):
+    open_form('HomeForm')
+    pass
+
+  def nav_about_click(self, **event_args):
+    open_form('AboutForm')
+    pass
+
+  def nav_notations_click(self, **event_args):
+    open_form('NotationsForm')
+    pass
+
+  def nav_search_click(self, **event_args):
+    open_form('SearchForm')
+    pass
+
+  def nav_blog_click(self, **event_args):
+    open_form('BlogForm')
+    pass
+
+  def EntryImport_click(self, **event_args):
+    open_form('EntryImport')
+    pass
