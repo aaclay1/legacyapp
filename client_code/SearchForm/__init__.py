@@ -31,3 +31,7 @@ class SearchForm(SearchFormTemplate):
   def nav_blog_click(self, **event_args):
     open_form('BlogForm')
     pass
+
+  def outlined_button_1_click(self, **event_args):
+    self.entries_panel.items = anvil.server.call('search_all_columns', self.outlined_1.text)
+    pass
