@@ -13,7 +13,8 @@ class NotationsForm(NotationsFormTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.refresh_entries()
-
+    self.label_result.visible=False
+    
   def nav_home_click(self, **event_args):
     open_form("HomeForm")
     pass
@@ -33,6 +34,7 @@ class NotationsForm(NotationsFormTemplate):
   def refresh_entries(self):
      self.entries_panel.items = anvil.server.call('get_entries')
      self.entries_panel1.items = anvil.server.call('get_entries')
+
   def nav_blog_click(self, **event_args):
     open_form('BlogForm')
     pass
@@ -48,5 +50,10 @@ class NotationsForm(NotationsFormTemplate):
     else:
         alert("Incorrect passcode.")
 
+    pass
+
+  def label_result_show(self, **event_args):
+    """This method is called when the Label is shown on the screen"""
+    self.entries_panel.items = anvil.server.call('get_entry_row',self.label_result.text)
     pass
        

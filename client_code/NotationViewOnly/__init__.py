@@ -12,4 +12,15 @@ class NotationViewOnly(NotationViewOnlyTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run when the form opens.
+  def link_click(self, **event_args):
+    """This method is called when the Link is clicked"""
+    item = self.item  # Get the data associated with the clicked row
+    search_term = str(self.item['startYear']) + '-' + str(self.item['endYear'])+'   ' + self.item['firstName'] + ' ' + self.item['middleName']+ ' ' + self.item['lastName']+ '   ' + self.item['occupation']+ '   ' + self.item['geoLocation']  # Get the search key from the row
+    self.search(search_term)  # Call the search function
+
+  def search(self, search_term):
+    # Define your search logic here
+    get_open_form().label_result.visible=False
+    print(f"Search triggered for: {search_term}")
+    get_open_form().label_result.text = f"Results for {search_term}"
+    get_open_form().label_result.visible=True

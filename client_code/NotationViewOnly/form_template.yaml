@@ -3,19 +3,19 @@ container:
   properties: {col_widths: '{}'}
 components:
 - type: ColumnPanel
-  properties: {role: null, col_widths: '{"TAHOSC":15,"XGUAPS":74,"UGUKIZ":3}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
+  properties: {role: null, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
   name: column_panel_1
   layout_properties: {grid_position: 'PAFXYP,FWHHIW'}
   components:
-  - type: FlowPanel
-    properties: {role: null, align: left, spacing_above: none, background: '', foreground: '', spacing_below: none, visible: false, border: '', tooltip: '', spacing: medium}
-    name: flow_panel_1
-    layout_properties: {grid_position: 'MHWRRD,XGUAPS WAARJG,TAHOSC'}
-    components: []
-  - name: fullName_box
-    properties: {role: null, bold: true, align: left, spacing_above: none, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: none, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: ''}
-    type: Label
-    layout_properties: {grid_position: 'MHWRRD,XGUAPS UKOZVZ,ENCBAZ'}
+  - name: repeating_panel_1
+    properties: {item_template: NotationViewOnly.ItemTemplate5}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'WKOAMS,GHFIDM'}
+  - name: link
+    properties: {text: '{self.item[''search_key'']}', align: left}
+    type: Button
+    layout_properties: {grid_position: 'FHGIUQ,FQWMPC'}
     data_bindings:
     - {property: text, code: 'str(self.item[''startYear'']) + ''-'' + str(self.item[''endYear''])+''   '' + self.item[''firstName''] + '' '' + self.item[''middleName'']+ '' '' + self.item[''lastName'']+ ''   '' + self.item[''occupation'']+ ''   '' + self.item[''geoLocation'']', writeback: false}
+    event_bindings: {click: link_click}
 is_package: true
