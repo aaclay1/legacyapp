@@ -69,3 +69,12 @@ components:
       format: restricted_html
     type: RichText
     layout_properties: {grid_position: 'EMUPAR,UIWKKM'}
+    components:
+    - name: timer_1
+      properties: {}
+      type: Timer
+      event_bindings: {tick: timer_1_tick}
+    - name: rich_text_1
+      properties: {format: restricted_html}
+      type: RichText
+      layout_properties: {}
