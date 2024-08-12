@@ -4,15 +4,15 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import anvil.js
 
 
 class HomeForm(HomeFormTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
-    # Any code you write here will run when the form opens.
-
+    # Set the content of the RichText to include a div with the editor-container ID
+   
   def nav_home_click(self, **event_args):
     open_form('HomeForm')
     pass
