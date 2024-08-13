@@ -32,12 +32,20 @@ def get_entries():
 @anvil.server.callable
 def convertToRTF(text):
   # Get a list of entries from the Data Table, sorted by 'created' column, in descending order
-  return markdown.markdown(text)
-  
+ 
+  if text is not None:
+     return markdown.markdown(text)
+  else:
+    text
 @anvil.server.callable
 def convertToMarkdown(text):
   # Get a list of entries from the Data Table, sorted by 'created' column, in descending order
-  return html2text.html2text(text)
+  if text is not None:
+    print("dfd"+text) 
+    return html2text.html2text(text)
+  else:
+    print("None"+text) 
+    text
   
 @anvil.server.callable
 def get_entry_row(input_str):
