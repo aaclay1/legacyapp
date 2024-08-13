@@ -3,6 +3,8 @@ import anvil.tables.query as q
 import csv
 from anvil.tables import app_tables
 import anvil.server
+import markdown
+import html2text
 from datetime import datetime
 
 
@@ -25,12 +27,20 @@ def add_blog(entry_dict):
 def get_entries():
   # Get a list of entries from the Data Table, sorted by 'created' column, in descending order
   return app_tables.entries.search(
-    tables.order_by("created", ascending=False)
+    tables.order_by('startYear', ascending=True)
   )
+@anvil.server.callable
+def convertToRTF(text):
+  # Get a list of entries from the Data Table, sorted by 'created' column, in descending order
+  return markdown.markdown(text)
+  
+@anvil.server.callable
+def convertToMarkdown(text):
+  # Get a list of entries from the Data Table, sorted by 'created' column, in descending order
+  return html2text.html2text(text)
   
 @anvil.server.callable
 def get_entry_row(input_str):
-  print(len(input_str))
   if len(input_str)>0:
     input_str = input_str[12:]
     # Extract startYear and endYear
@@ -65,7 +75,7 @@ def get_entry_row(input_str):
       geoLocation=geoLocation
     )
   else:
-    return app_tables.entries.search()
+    return app_tables.entries.search(tables.order_by('startYear', ascending=True))
     
 @anvil.server.callable
 def get_blogs():

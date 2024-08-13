@@ -27,6 +27,7 @@ class EntryView(EntryViewTemplate):
     )
     # Update the entry if the user clicks save
     if save_clicked:
+      entry_copy['content']=anvil.server.call('convertToRTF',entry_copy['content'])
       anvil.server.call('update_entry', self.item, entry_copy)
   
       # Now refresh the page
@@ -37,7 +38,7 @@ class EntryView(EntryViewTemplate):
     # Get the user to confirm if they wish to delete the entry
     # If yes, raise the 'x-delete-entry' event on the parent 
     # (which is the entries_panel on Homepage)
-    if confirm(f"Are you sure you want to delete {self.item['title']}?"):
+    if confirm(f"Are you sure you want to delete {str(self.item['startYear']) + '-' + str(self.item['endYear'])+'   ' + self.item['firstName'] + ' ' + self.item['middleName']+ ' ' + self.item['lastName']+ '   ' + self.item['occupation']+ '   ' + self.item['geoLocation']}?"):
       self.parent.raise_event('x-delete-entry', entry=self.item)
 
 
