@@ -74,8 +74,8 @@ def get_entry_row(input_str):
     geoLocation = input_str[occupation_end + 3:]  # Everything after the occupation
   
     return app_tables.entries.search(
-      startYear=int(startYear),
-      endYear=int(endYear),
+      startYear=startYear,
+      endYear=endYear,
       firstName=firstName,
       middleName=middleName, 
       lastName=lastName,
