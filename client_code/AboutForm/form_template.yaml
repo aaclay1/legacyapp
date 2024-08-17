@@ -50,18 +50,21 @@ components:
     properties: {text: ABOUT, bold: true, align: center, border: 1px solid black}
     type: Label
     layout_properties: {grid_position: 'QFZHXC,QZYWDP'}
+  - name: image_1
+    properties: {source: _/theme/Judson_University_sign.png, display_mode: fill_width}
+    type: Image
+    layout_properties: {grid_position: 'IJVRHQ,YIUHNS'}
   - name: rich_text_1
     properties:
-      content: |2-
+      content: |
+        <p  style="font-size: 16px; line-height: 25.6px; font-family: Jost, sans-serif; "><span style="font-family:georgia,serif;">My interest in the Judson name began toward the end of the last century when I became president at Judson University in Illinois. Once I encountered the name of Ann and Adoniram Judson I experienced the Yellow Volkswagen syndrome in which people tend to see a particular thing everywhere after noticing it for the first time. Everywhere I looked I saw the name Judson and soon became mesmerized by the abundant notations on this legendary missionary couple.</span></p>
 
-                <p>Each entry in this project is labeled three ways and may be searched in any of these fashions:</p>
-                <ul>
-                    <li>The chronological listing compiles namesakes in groups of 15-20 over a set timeline, thus the first listing will be found in 1814-1819.</li>
-                    <li>The second listing will be the formal name of the person, place, or thing bearing the name of Judson. One could search Adoniram Judson Coleman by using his last name.</li>
-                    <li>The third listing will be geographical based on the place of birth and/or death and using the standard abbreviations for that U.S. State. Adoniram Judson Coleman was born in Maine (ME) and died in Illinois (IL).</li>
-                </ul>
-                <p>Thus the entry will look like this: 1814-1819, Adoniram Judson Coleman, Congregational Minister, ME/IL</p>
+        <p style="font-size: 16px; line-height: 25.6px; font-family: Jost, sans-serif; "><span style="font-family:georgia,serif;">And so, for the past quarter century, I have quietly collected each reference to Ann and Adoniram Judson, important pioneers in the modern missionary movement. This compilation is the result of many years of casually scribbled notes to myself about a missionary couple I have come to admire.</span></p>
+
+        <p style="font-family: Jost, sans-serif;"><span style="font-family:georgia,serif;">If you ask if this compilation is history or trivia or genealogy or story-telling, the answer is yes. The Judsons, have become such an icon that their name is still honored 200 years later. It is a story worth telling and retelling as the compiler of Proverbs reminds us, &ldquo;a good name is rather to be chosen than great riches.&rdquo; (Proverbs 22:1)</span></p>
+
+        <p style="box-sizing: border-box; color: var(--grey-main); margin: 0px; padding: 0px; font-size: 16px; line-height: 25.6px; font-family: Jost, sans-serif; text-align: center; background-color: rgb(255, 255, 255);"><span style="font-family:georgia,serif;">-Jerry B. Cain</span></p>
       format: restricted_html
-      align: left
+      align: center
     type: RichText
     layout_properties: {grid_position: 'ZBRLWZ,DQUQHV'}
