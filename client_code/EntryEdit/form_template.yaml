@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"WDVKHL":40,"EMJPBA":15,"YGUNZB":15,"GWUCKG":5}'}
+  properties: {col_widths: '{"WDVKHL":40,"EMJPBA":15,"YGUNZB":15,"GWUCKG":5,"LKKCYX":5,"PJCXQE":55}'}
 components:
 - name: label_3
   properties: {text: 'Year Span:'}
@@ -77,7 +77,7 @@ components:
   name: label_2
   layout_properties: {grid_position: 'ESBUON,LKKCYX'}
 - type: TextArea
-  properties: {height: 145}
+  properties: {height: 323}
   name: content_box
   layout_properties: {grid_position: 'ESBUON,PJCXQE'}
   data_bindings:

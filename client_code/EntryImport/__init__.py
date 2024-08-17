@@ -34,8 +34,9 @@ class EntryImport(EntryImportTemplate):
       row_data = {header: value for header, value in zip(headers, values)}
       # Insert the row into the DataTable
       print(row_data)
-      content =re.sub(r'{return}', '\r', row_data['content'].replace("{comma}", ","))
-      content = content[:len(content)-1]
+      content =row_data['content'].replace('-comma-', ',')
+      content = content.replace('""', '"')
+      content = content[1:len(content)-1].strip()
       app_tables.entries.add_row(startYear=row_data['startYear'],endYear=row_data['endYear'],firstName=row_data['firstName'],lastName=row_data['lastName'],middleName=row_data['middleName'],occupation=row_data['occupation'],geoLocation=row_data['geoLocation'],content=content,created=datetime.now(),updated=datetime.now())
       
     alert("CSV file uploaded and data saved!")
