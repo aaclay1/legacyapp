@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"WDVKHL":40,"EMJPBA":15,"YGUNZB":15,"GWUCKG":5,"LKKCYX":5,"PJCXQE":55}'}
+  properties: {col_widths: '{"WDVKHL":40,"EMJPBA":15,"YGUNZB":15,"GWUCKG":5}'}
 components:
 - name: label_3
   properties: {text: 'Year Span:'}
@@ -15,7 +15,7 @@ components:
 - name: label_5
   properties: {text: '-'}
   type: Label
-  layout_properties: {grid_position: 'YGGYWR,LEWIHF CTUNOO,GWUCKG'}
+  layout_properties: {grid_position: 'CTUNOO,GWUCKG'}
 - name: End_Year_Box
   properties: {text: 'self.item[''startYear'']', enabled: true, hide_text: false, type: number}
   type: TextBox
@@ -75,13 +75,23 @@ components:
 - type: Label
   properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Content:'}
   name: label_2
-  layout_properties: {grid_position: 'ESBUON,LKKCYX'}
+  layout_properties: {grid_position: 'FVMQCC,RIGDOG'}
 - type: TextArea
   properties: {height: 323}
   name: content_box
-  layout_properties: {grid_position: 'ESBUON,PJCXQE'}
+  layout_properties: {grid_position: 'FVMQCC,RTTJIL'}
   data_bindings:
   - {property: text, code: 'self.item[''content'']', writeback: true}
+- name: label_6
+  properties: {text: 'Reference:'}
+  type: Label
+  layout_properties: {grid_position: 'DCHREC,ISRGSN'}
+- name: ref_box
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'DCHREC,YWXGQX'}
+  data_bindings:
+  - {property: text, code: 'self.item[''Ref'']', writeback: true}
 - type: Label
   properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Image:'}
   name: label_4
