@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"WDVKHL":40,"EMJPBA":15,"YGUNZB":15,"GWUCKG":5}'}
+  properties: {col_widths: '{"WDVKHL":40,"EMJPBA":15,"YGUNZB":15,"GWUCKG":5,"RIGDOG":15,"RTTJIL":45,"ISRGSN":15,"YWXGQX":45}'}
 components:
 - name: label_3
   properties: {text: 'Year Span:'}
@@ -75,7 +75,15 @@ components:
 - type: Label
   properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Content:'}
   name: label_2
-  layout_properties: {grid_position: 'FVMQCC,RIGDOG'}
+  layout_properties: {grid_position: 'FVMQCC,RIGDOG SJUYBJ,TZZYXG'}
+- name: label_9
+  properties:
+    text: "HTML Key: \n\n   Heading:\n       <h2>text</h2>\n\n   Paragraph: \n      <p>text</p>\n\n   Quote Block: \n      <blockquote style=\n         \"font-size: 10pt;\"> \n          text \n     </blockquote>\n\n  Bold:\n      <b>text</b>\n"
+    role: null
+    font_size: 10
+    bold: true
+  type: Label
+  layout_properties: {grid_position: 'FVMQCC,RIGDOG YNNSTU,LYIYKY'}
 - type: TextArea
   properties: {height: 323}
   name: content_box

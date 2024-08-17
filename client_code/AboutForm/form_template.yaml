@@ -56,7 +56,7 @@ components:
     layout_properties: {grid_position: 'IJVRHQ,YIUHNS'}
   - name: rich_text_1
     properties:
-      content: |
+      content: |+
         <p  style="font-size: 16px; line-height: 25.6px; font-family: Jost, sans-serif; "><span style="font-family:georgia,serif;">My interest in the Judson name began toward the end of the last century when I became president at Judson University in Illinois. Once I encountered the name of Ann and Adoniram Judson I experienced the Yellow Volkswagen syndrome in which people tend to see a particular thing everywhere after noticing it for the first time. Everywhere I looked I saw the name Judson and soon became mesmerized by the abundant notations on this legendary missionary couple.</span></p>
 
         <p style="font-size: 16px; line-height: 25.6px; font-family: Jost, sans-serif; "><span style="font-family:georgia,serif;">And so, for the past quarter century, I have quietly collected each reference to Ann and Adoniram Judson, important pioneers in the modern missionary movement. This compilation is the result of many years of casually scribbled notes to myself about a missionary couple I have come to admire.</span></p>
@@ -64,6 +64,11 @@ components:
         <p style="font-family: Jost, sans-serif;"><span style="font-family:georgia,serif;">If you ask if this compilation is history or trivia or genealogy or story-telling, the answer is yes. The Judsons, have become such an icon that their name is still honored 200 years later. It is a story worth telling and retelling as the compiler of Proverbs reminds us, &ldquo;a good name is rather to be chosen than great riches.&rdquo; (Proverbs 22:1)</span></p>
 
         <p style="box-sizing: border-box; color: var(--grey-main); margin: 0px; padding: 0px; font-size: 16px; line-height: 25.6px; font-family: Jost, sans-serif; text-align: center; background-color: rgb(255, 255, 255);"><span style="font-family:georgia,serif;">-Jerry B. Cain</span></p>
+
+
+
+
+
       format: restricted_html
       align: center
     type: RichText
