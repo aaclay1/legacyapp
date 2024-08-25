@@ -60,11 +60,21 @@ components:
     type: Label
     layout_properties: {grid_position: 'RYXKBP,YGDARZ KBCUTN,MFVLFA'}
     event_bindings: {show: label_result_show}
-  - name: entries_panel
-    properties: {item_template: EntryViewOnly}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'RYXKBP,YGDARZ RHZAUK,WXJTZC'}
-  - name: entries_panel1
-    properties: {item_template: NotationViewOnly}
-    type: RepeatingPanel
+  - name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'RYXKBP,YGDARZ TFJLHP,AQDDGF'}
+    components:
+    - name: entries_panel
+      properties: {item_template: EntryViewOnly}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'LVQIJA,LIFIQN'}
+  - name: column_panel_2
+    properties: {}
+    type: ColumnPanel
     layout_properties: {grid_position: 'RYXKBP,DQXRDP'}
+    components:
+    - name: entries_panel1
+      properties: {item_template: NotationViewOnly}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'TRBJFX,GYKRSU'}

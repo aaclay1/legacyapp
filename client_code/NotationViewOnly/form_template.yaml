@@ -2,20 +2,11 @@ container:
   type: ColumnPanel
   properties: {col_widths: '{}', col_spacing: none, spacing_above: none, spacing_below: none}
 components:
-- type: ColumnPanel
-  properties: {role: null, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
-  name: column_panel_1
-  layout_properties: {grid_position: 'PAFXYP,FWHHIW'}
-  components:
-  - name: repeating_panel_1
-    properties: {item_template: NotationViewOnly.ItemTemplate5, spacing_above: none, spacing_below: none}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'WKOAMS,GHFIDM'}
-  - name: link
-    properties: {text: '{self.item[''search_key'']}', align: full, bold: false}
-    type: Button
-    layout_properties: {grid_position: 'FHGIUQ,FQWMPC'}
-    data_bindings:
-    - {property: text, code: 'str(self.item[''startYear'']) + ''-'' + str(self.item[''endYear''])+''   '' + self.item[''firstName''] + '' '' + self.item[''middleName'']+ '' '' + self.item[''lastName'']+ ''   '' + self.item[''occupation'']+ ''   '' + self.item[''geoLocation'']', writeback: false}
-    event_bindings: {click: link_click}
+- name: link
+  properties: {text: '{self.item[''search_key'']}', align: full, bold: false}
+  type: Button
+  layout_properties: {grid_position: ''}
+  data_bindings:
+  - {property: text, code: 'str(self.item[''startYear'']) + ''-'' + str(self.item[''endYear''])+''   '' + self.item[''firstName''] + '' '' + self.item[''middleName'']+ '' '' + self.item[''lastName'']+ ''   '' + self.item[''occupation'']+ ''   '' + self.item[''geoLocation'']', writeback: false}
+  event_bindings: {click: link_click}
 is_package: true

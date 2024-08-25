@@ -14,7 +14,9 @@ class NotationsForm(NotationsFormTemplate):
     self.init_components(**properties)
     self.refresh_entries()
     self.label_result.visible=False
-    
+    self.column_panel_1.height = "400px"
+    self.column_panel_1.overflow_y = "auto"
+    self.entries_panel.items = [{'text': f'Item {i}'} for i in range(100)] 
   def nav_home_click(self, **event_args):
     open_form("HomeForm")
     pass
