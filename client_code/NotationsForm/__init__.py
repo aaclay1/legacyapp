@@ -11,12 +11,14 @@ from ..PasscodeForm import PasscodeForm
 class NotationsForm(NotationsFormTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self.column_panel_1.role = "scrollable-panel"
     self.init_components(**properties)
     self.refresh_entries()
     self.label_result.visible=False
-    self.column_panel_1.height = "400px"
-    self.column_panel_1.overflow_y = "auto"
-    self.entries_panel.items = [{'text': f'Item {i}'} for i in range(100)] 
+    # Directly reference the container by its name
+    self.column_panel_1.set_event_handler('x-get-height', lambda **e: "400px")
+    self.column_panel_1.overflow_y = "scroll"  # Enable vertical scrolling
+    
   def nav_home_click(self, **event_args):
     open_form("HomeForm")
     pass

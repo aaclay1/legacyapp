@@ -71,7 +71,7 @@ components:
     layout_properties: {grid_position: 'EMUPAR,UIWKKM'}
     components:
     - name: rich_text_1
-      properties: {format: restricted_html, content: '<h2><p><span style="font-family:georgia,serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-weight: bolder;">The Curator: Jerry Cain</span></span></span></p></h2>', align: center}
+      properties: {format: restricted_html, content: '<h2><p><span style="font-family:georgia,serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-weight: bolder;">The Compiler: Jerry Cain</span></span></span></p></h2>', align: center}
       type: RichText
       layout_properties: {}
       components:
