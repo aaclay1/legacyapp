@@ -1,61 +1,55 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
 components:
-- type: FlowPanel
-  properties: {}
+- layout_properties: {slot: nav-right}
   name: navbar_links
-  layout_properties: {slot: nav-right}
-- name: content_panel
-  properties: {background: 'theme:Dark Overlay 1'}
-  type: ColumnPanel
-  layout_properties: {slot: default}
-  components:
-  - name: title_copy
+  properties: {}
+  type: FlowPanel
+- components:
+  - layout_properties: {grid_position: 'UVGEQM,BAFZCK'}
+    name: title_copy
     properties:
-      format: restricted_html
       align: center
       content: "    <div style=\"font-family: 'Allura', cursive; font-size: 64px;font-weight: 400;\">\n    <h1 style=\"font-weight: 400; font-size: 48px;\">The Judson Legacy Project</h1>  <h3> Exploring the people, places, and things impacted by the 19th-century missionaries to Burma,\n    </h3> <h3> Ann and Adoniram Judson Jr. </h3>\n    </div>\n    "
+      format: restricted_html
       spacing_above: none
       spacing_below: none
     type: RichText
-    layout_properties: {grid_position: 'UVGEQM,BAFZCK'}
-  - name: nav_home
-    properties: {text: Home, bold: true, icon: 'fa:home', foreground: 'theme:On Secondary Container'}
-    type: Button
+  - event_bindings: {click: nav_home_click}
     layout_properties: {grid_position: 'STMHCM,AZRDMX'}
-    event_bindings: {click: nav_home_click}
-  - name: nav_about
-    properties: {text: About, bold: true, icon: 'fa:info-circle', foreground: 'theme:On Secondary Container'}
+    name: nav_home
+    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:home', text: Home}
     type: Button
+  - event_bindings: {click: nav_about_click}
     layout_properties: {grid_position: 'STMHCM,LPBKOF'}
-    event_bindings: {click: nav_about_click}
-  - name: nav_notations
-    properties: {text: Entries, bold: true, icon: 'fa:th-list', foreground: 'theme:On Secondary Container'}
+    name: nav_about
+    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:info-circle', text: About}
     type: Button
+  - event_bindings: {click: nav_notations_click}
     layout_properties: {grid_position: 'STMHCM,EDZDRS'}
-    event_bindings: {click: nav_notations_click}
-  - name: nav_search
-    properties: {text: Search, bold: true, icon: 'fa:search', foreground: 'theme:On Secondary Container'}
+    name: nav_notations
+    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:th-list', text: Entries}
     type: Button
+  - event_bindings: {click: nav_search_click}
     layout_properties: {grid_position: 'STMHCM,ZPIQZW'}
-    event_bindings: {click: nav_search_click}
-  - name: nav_blog
-    properties: {text: Blog, icon: 'fa:sticky-note', foreground: 'theme:On Secondary Container'}
+    name: nav_search
+    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:search', text: Search}
     type: Button
+  - event_bindings: {click: nav_blog_click}
     layout_properties: {grid_position: 'STMHCM,QBOZFH'}
-    event_bindings: {click: nav_blog_click}
-  - name: label_1
-    properties: {text: ABOUT, bold: true, align: center, border: 1px solid black}
+    name: nav_blog
+    properties: {foreground: 'theme:On Secondary Container', icon: 'fa:sticky-note', text: Blog}
+    type: Button
+  - layout_properties: {grid_position: 'QFZHXC,QZYWDP'}
+    name: label_1
+    properties: {align: center, bold: true, border: 1px solid black, text: ABOUT}
     type: Label
-    layout_properties: {grid_position: 'QFZHXC,QZYWDP'}
-  - name: image_1
-    properties: {source: _/theme/Judson_University_sign.png, display_mode: fill_width}
+  - layout_properties: {grid_position: 'IJVRHQ,YIUHNS'}
+    name: image_1
+    properties: {display_mode: fill_width, source: _/theme/Judson_University_sign.png}
     type: Image
-    layout_properties: {grid_position: 'IJVRHQ,YIUHNS'}
-  - name: rich_text_1
+  - layout_properties: {grid_position: 'ZBRLWZ,DQUQHV'}
+    name: rich_text_1
     properties:
+      align: center
       content: |+
         <p  style="font-size: 16px; line-height: 25.6px; font-family: Jost, sans-serif; "><span style="font-family:georgia,serif;">My interest in the Judson name began toward the end of the last century when I became president at Judson University in Illinois. Once I encountered the name of Ann and Adoniram Judson I experienced the Yellow Volkswagen syndrome in which people tend to see a particular thing everywhere after noticing it for the first time. Everywhere I looked I saw the name Judson and soon became mesmerized by the abundant notations on this legendary missionary couple.</span></p>
 
@@ -70,6 +64,12 @@ components:
 
 
       format: restricted_html
-      align: center
     type: RichText
-    layout_properties: {grid_position: 'ZBRLWZ,DQUQHV'}
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {background: 'theme:Dark Overlay 1'}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

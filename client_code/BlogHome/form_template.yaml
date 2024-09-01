@@ -1,71 +1,71 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: nav_home
-    properties: {text: Home, bold: true, icon: 'fa:home', foreground: 'theme:On Secondary Container'}
-    type: Button
+- components:
+  - event_bindings: {click: nav_home_click}
     layout_properties: {grid_position: 'DRZMPD,CYYWHS'}
-    event_bindings: {click: nav_home_click}
-  - name: nav_about
-    properties: {text: About, bold: true, icon: 'fa:info-circle', foreground: 'theme:On Secondary Container'}
+    name: nav_home
+    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:home', text: Home}
     type: Button
+  - event_bindings: {click: nav_about_click}
     layout_properties: {grid_position: 'DRZMPD,PPLGMH'}
-    event_bindings: {click: nav_about_click}
-  - name: nav_notations
-    properties: {text: Entries, bold: true, icon: 'fa:th-list', foreground: 'theme:On Secondary Container'}
+    name: nav_about
+    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:info-circle', text: About}
     type: Button
+  - event_bindings: {click: nav_notations_click}
     layout_properties: {grid_position: 'DRZMPD,ADZYHL'}
-    event_bindings: {click: nav_notations_click}
-  - name: nav_search
-    properties: {text: Search, bold: true, icon: 'fa:search', foreground: 'theme:On Secondary Container', role: null}
+    name: nav_notations
+    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:th-list', text: Entries}
     type: Button
+  - event_bindings: {click: nav_search_click}
     layout_properties: {grid_position: 'DRZMPD,OCBISD'}
-    event_bindings: {click: nav_search_click}
-  - name: nav_blog
-    properties: {text: Blog, icon: 'fa:sticky-note', foreground: 'theme:On Secondary Container'}
+    name: nav_search
+    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:search', role: null, text: Search}
     type: Button
+  - event_bindings: {click: nav_blog_click}
     layout_properties: {grid_position: 'DRZMPD,KWRZKR'}
-    event_bindings: {click: nav_blog_click}
-  - type: Button
+    name: nav_blog
+    properties: {foreground: 'theme:On Secondary Container', icon: 'fa:sticky-note', text: Blog}
+    type: Button
+  - event_bindings: {click: add_entry_button_click}
+    layout_properties: {grid_position: 'CBFHGL,NKFPMX'}
+    name: add_entry_button
     properties:
-      role: filled-button
-      bold: false
       align: center
-      spacing_above: small
       background: ''
-      icon: fa:plus-circle
-      underline: false
-      font: ''
-      icon_align: left
-      foreground: ''
-      spacing_below: large
-      visible: true
+      bold: false
       border: ''
-      italic: false
       enabled: true
+      font: ''
       font_size: null
-      tooltip: ''
+      foreground: ''
+      icon: fa:plus-circle
+      icon_align: left
+      italic: false
+      role: filled-button
+      spacing_above: small
+      spacing_below: large
       text: |
         Add an Blog
-    name: add_entry_button
-    layout_properties: {grid_position: 'CBFHGL,NKFPMX'}
-    event_bindings: {click: add_entry_button_click}
-  - type: RepeatingPanel
-    properties: {role: null, spacing_above: small, background: '', item_template: BlogView, foreground: '', items: null, spacing_below: small, visible: true, border: '', tooltip: ''}
+      tooltip: ''
+      underline: false
+      visible: true
+    type: Button
+  - layout_properties: {grid_position: 'XRGDXR,JQCHKL', slot: title}
     name: entries_panel
-    layout_properties: {slot: title, grid_position: 'XRGDXR,JQCHKL'}
-- type: FlowPanel
-  properties: {}
+    properties: {background: '', border: '', foreground: '', item_template: BlogView, items: null, role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true}
+    type: RepeatingPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
   name: navbar_links
-  layout_properties: {slot: nav-right}
-- type: Label
-  properties: {role: title, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Edit Blog}
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
   name: label_1
-  layout_properties: {slot: title}
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing_above: small, spacing_below: small, text: Edit Blog, tooltip: '', underline: false, visible: true}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

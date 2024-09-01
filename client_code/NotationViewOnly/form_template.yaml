@@ -1,12 +1,12 @@
-container:
-  type: ColumnPanel
-  properties: {col_widths: '{}', col_spacing: none, spacing_above: none, spacing_below: none}
 components:
-- name: link
-  properties: {text: '{self.item[''search_key'']}', align: full, bold: false}
-  type: Button
-  layout_properties: {grid_position: ''}
-  data_bindings:
-  - {property: text, code: 'str(self.item[''startYear'']) + ''-'' + str(self.item[''endYear''])+''   '' + self.item[''firstName''] + '' '' + self.item[''middleName'']+ '' '' + self.item[''lastName'']+ ''   '' + self.item[''occupation'']+ ''   '' + self.item[''geoLocation'']', writeback: false}
+- data_bindings:
+  - {code: 'str(self.item[''startYear'']) + ''-'' + str(self.item[''endYear''])+''   '' + self.item[''firstName''] + '' '' + self.item[''middleName'']+ '' '' + self.item[''lastName'']+ ''   '' + self.item[''occupation'']+ ''   '' + self.item[''geoLocation'']', property: text, writeback: false}
   event_bindings: {click: link_click}
+  layout_properties: {grid_position: ''}
+  name: link
+  properties: {align: full, bold: false, text: '{self.item[''search_key'']}'}
+  type: Button
+container:
+  properties: {col_spacing: none, col_widths: '{}', spacing_above: none, spacing_below: none}
+  type: ColumnPanel
 is_package: true
