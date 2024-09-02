@@ -11,7 +11,9 @@ class NotationViewOnly(NotationViewOnlyTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    if self.image_1.source is None:
+      self.image_1.visible = False
+    
   def link_click(self, **event_args):
     """This method is called when the Link is clicked"""
     item = self.item  # Get the data associated with the clicked row

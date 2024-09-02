@@ -9,7 +9,7 @@
   margin-bottom: -10px;
 }
 .anvil-role-scrollable-panel {
-    height: 400px;        /* Set the height */
+    height: 900px;        /* Set the height */
     overflow-y: scroll;   /* Enable vertical scrolling */
     overflow-x: hidden;   /* Prevent horizontal scrolling */
 }

@@ -12,12 +12,13 @@ class NotationsForm(NotationsFormTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.column_panel_1.role = "scrollable-panel"
+    self.column_panel_2.role = "scrollable-panel"
     self.init_components(**properties)
     self.refresh_entries()
     self.label_result.visible=False
     # Directly reference the container by its name
-    self.column_panel_1.set_event_handler('x-get-height', lambda **e: "400px")
-    self.column_panel_1.overflow_y = "scroll"  # Enable vertical scrolling
+    # Set a specific height for the ColumnPanel
+    # This is in the Theme.css : .anvil-role-scrollable-pane
     
   def nav_home_click(self, **event_args):
     open_form("HomeForm")
