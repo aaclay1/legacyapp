@@ -28,7 +28,7 @@ class EntryHome(EntryHomeTemplate):
     )
     # If the alert returned 'True', the save button was clicked.
     if save_clicked:
-      new_entry['content']=new_entry['content']
+      new_entry=anvil.server.call('setDefault', new_entry)
       anvil.server.call('add_entry', new_entry)
       self.refresh_entries()
     

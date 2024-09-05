@@ -152,3 +152,11 @@ def search_all_columns(search_value):
                 break  # Break the inner loop if we find a match, move to the next row
     
     return results
+
+@anvil.server.callable
+def setDefault(new_entry):
+  my_list = ['startYear', 'endYear', 'firstName', 'middleName', 'lastName', 'occupation', 'geoLocation', 'content', 'Ref']
+  for item in my_list:
+    if item not in new_entry:
+      new_entry[item] = ''
+  return new_entry
