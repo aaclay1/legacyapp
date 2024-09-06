@@ -48,8 +48,9 @@ components:
     type: Label
   - components:
     - components:
-      - name: image_2
-        properties: {display_mode: fill_width, height: 285.39996337890625, source: _/theme/Jerry.png}
+      - layout_properties: {}
+        name: image_2
+        properties: {display_mode: original_size, height: 285.39996337890625, source: _/theme/Jerry.png}
         type: Image
       - layout_properties: {}
         name: rich_text_3
