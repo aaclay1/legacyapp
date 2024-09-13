@@ -1,89 +1,89 @@
 allow_embedding: false
-package_name: News_App
+correct_dependency_ids: {}
 db_schema:
-  entries:
-    title: Entries
-    client: full
-    server: full
-    columns:
-    - name: firstName
-      admin_ui: {order: 0, width: 200}
-      type: string
-    - name: content
-      admin_ui: {width: 200}
-      type: string
-    - name: image
-      admin_ui: {width: 200}
-      type: media
-    - name: created
-      admin_ui: {width: 200}
-      type: datetime
-    - name: updated
-      admin_ui: {width: 200}
-      type: datetime
-    - name: startYear
-      admin_ui: {order: -1, width: 200}
-      type: number
-    - name: endYear
-      admin_ui: {order: -0.5, width: 200}
-      type: number
-    - name: middleName
-      admin_ui: {width: 200, order: 0.5}
-      type: string
-    - name: lastName
-      admin_ui: {order: 0.75, width: 200}
-      type: string
-    - name: occupation
-      admin_ui: {order: 0.875, width: 200}
-      type: string
-    - name: geoLocation
-      admin_ui: {order: 0.9375, width: 200}
-      type: string
-  categories:
-    title: Categories
-    client: search
-    server: full
-    columns:
-    - name: name
-      admin_ui: {width: 200}
-      type: string
   blogs:
     client: none
-    server: full
     columns:
-    - name: created
-      admin_ui: {order: 4, width: 200}
+    - admin_ui: {order: 4, width: 200}
+      name: created
       type: datetime
-    - name: updated
-      admin_ui: {order: 5, width: 200}
+    - admin_ui: {order: 5, width: 200}
+      name: updated
       type: datetime
-    - name: image
-      admin_ui: {width: 200, order: 2}
+    - admin_ui: {order: 2, width: 200}
+      name: image
       type: media
-    - name: content
-      admin_ui: {width: 200, order: 3}
+    - admin_ui: {order: 3, width: 200}
+      name: content
       type: string
-    - name: author
-      admin_ui: {order: 1, width: 200}
+    - admin_ui: {order: 1, width: 200}
+      name: author
       type: string
-    - name: heading
-      admin_ui: {order: 1.5, width: 200}
+    - admin_ui: {order: 1.5, width: 200}
+      name: heading
       type: string
+    server: full
     title: Blogs
-startup: {type: form, module: HomeForm}
+  categories:
+    client: search
+    columns:
+    - admin_ui: {width: 200}
+      name: name
+      type: string
+    server: full
+    title: Categories
+  entries:
+    client: full
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: firstName
+      type: string
+    - admin_ui: {width: 200}
+      name: content
+      type: string
+    - admin_ui: {width: 200}
+      name: image
+      type: media
+    - admin_ui: {width: 200}
+      name: created
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated
+      type: datetime
+    - admin_ui: {order: -1, width: 200}
+      name: startYear
+      type: number
+    - admin_ui: {order: -0.5, width: 200}
+      name: endYear
+      type: number
+    - admin_ui: {order: 0.5, width: 200}
+      name: middleName
+      type: string
+    - admin_ui: {order: 0.75, width: 200}
+      name: lastName
+      type: string
+    - admin_ui: {order: 0.875, width: 200}
+      name: occupation
+      type: string
+    - admin_ui: {order: 0.9375, width: 200}
+      name: geoLocation
+      type: string
+    server: full
+    title: Entries
+dependencies: []
+metadata: {description: The Judson Legacy Project, logo_img: 'asset:AdoniramAndAnnJudson.jpg', title: The Judson Legacy Project}
 name: TheJudsonLegacyProject
-startup_form: null
-correct_dependency_ids: {}
+package_name: legacyApp
 renamed: true
 runtime_options:
-  version: 2
   client_version: '3'
-  server_version: python3-sandbox
   server_spec: {base: python310-minimal}
-  server_spec_disabled: {requirements: '', base: python310-minimal}
-dependencies: []
+  server_spec_disabled: {base: python310-minimal, requirements: ''}
+  server_version: python3-sandbox
+  version: 2
 services:
-- source: /runtime/services/tables.yml
-  client_config: {}
+- client_config: {}
   server_config: {}
-metadata: {title: The Judson Legacy Project, description: The Judson Legacy Project, logo_img: 'asset:AdoniramAndAnnJudson.jpg'}
+  source: /runtime/services/tables.yml
+startup: {module: HomeForm, type: form}
+startup_form: null

@@ -1,95 +1,95 @@
-container:
-  type: ColumnPanel
-  properties: {col_widths: '{"WDVKHL":40,"EMJPBA":15,"YGUNZB":15,"GWUCKG":5}'}
 components:
-- name: label_3
+- layout_properties: {grid_position: 'CTUNOO,WDVKHL'}
+  name: label_3
   properties: {text: 'Year Span:'}
   type: Label
-  layout_properties: {grid_position: 'CTUNOO,WDVKHL'}
-- name: Start_Year_Box
-  properties: {text: 'self.item[''startYear'']', enabled: true, hide_text: false, type: number}
-  type: TextBox
+- data_bindings:
+  - {code: 'self.item[''startYear'']', property: text, writeback: true}
   layout_properties: {grid_position: 'CTUNOO,EMJPBA'}
-  data_bindings:
-  - {property: text, code: 'self.item[''startYear'']', writeback: true}
-- name: label_5
+  name: Start_Year_Box
+  properties: {enabled: true, hide_text: false, text: 'self.item[''startYear'']', type: number}
+  type: TextBox
+- layout_properties: {grid_position: 'YGGYWR,LEWIHF CTUNOO,GWUCKG'}
+  name: label_5
   properties: {text: '-'}
   type: Label
-  layout_properties: {grid_position: 'YGGYWR,LEWIHF CTUNOO,GWUCKG'}
-- name: End_Year_Box
-  properties: {text: 'self.item[''startYear'']', enabled: true, hide_text: false, type: number}
-  type: TextBox
+- data_bindings:
+  - {code: 'self.item[''endYear'']', property: text, writeback: true}
   layout_properties: {grid_position: 'CTUNOO,YGUNZB'}
-  data_bindings:
-  - {property: text, code: 'self.item[''endYear'']', writeback: true}
-- type: Label
-  properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'First Name:'}
+  name: End_Year_Box
+  properties: {enabled: true, hide_text: false, text: 'self.item[''startYear'']', type: number}
+  type: TextBox
+- layout_properties: {grid_position: 'KLVTEY,DRHXDG'}
   name: label_1
-  layout_properties: {grid_position: 'KLVTEY,DRHXDG'}
-- type: TextBox
-  properties: {}
-  name: firstName_box
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'First Name:', tooltip: '', underline: false, visible: true}
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''firstName'']', property: text, writeback: true}
   layout_properties: {grid_position: 'KLVTEY,UUHGSQ'}
-  data_bindings:
-  - {property: text, code: 'self.item[''firstName'']', writeback: true}
-- name: label_1_copy
-  properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Middle Name:'}
-  type: Label
-  layout_properties: {grid_position: 'PQLQMG,TTPLNP'}
-- name: middleName_box
+  name: firstName_box
   properties: {}
   type: TextBox
+- layout_properties: {grid_position: 'PQLQMG,TTPLNP'}
+  name: label_1_copy
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Middle Name:', tooltip: '', underline: false, visible: true}
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''middleName'']', property: text, writeback: true}
   layout_properties: {grid_position: 'PQLQMG,DAIAGH'}
-  data_bindings:
-  - {property: text, code: 'self.item[''middleName'']', writeback: true}
-- name: label_1_copy_copy
-  properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Last Name:'}
-  type: Label
-  layout_properties: {grid_position: 'SZVHCH,HJMTGR'}
-- name: lastName_box
+  name: middleName_box
   properties: {}
   type: TextBox
+- layout_properties: {grid_position: 'SZVHCH,HJMTGR'}
+  name: label_1_copy_copy
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Last Name:', tooltip: '', underline: false, visible: true}
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''lastName'']', property: text, writeback: true}
   layout_properties: {grid_position: 'SZVHCH,WNOTCW'}
-  data_bindings:
-  - {property: text, code: 'self.item[''lastName'']', writeback: true}
-- name: label_1_copy_copy_copy
-  properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Occupation:'}
-  type: Label
-  layout_properties: {grid_position: 'DJPJFW,NTGMVR'}
-- name: occupation_box
+  name: lastName_box
   properties: {}
   type: TextBox
+- layout_properties: {grid_position: 'DJPJFW,NTGMVR'}
+  name: label_1_copy_copy_copy
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Occupation:', tooltip: '', underline: false, visible: true}
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''occupation'']', property: text, writeback: true}
   layout_properties: {grid_position: 'DJPJFW,VVIVKF'}
-  data_bindings:
-  - {property: text, code: 'self.item[''occupation'']', writeback: true}
-- name: label_1_copy_copy_copy_copy
-  properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Geographic Location:'}
-  type: Label
-  layout_properties: {grid_position: 'BOPUUJ,NMRLVW'}
-- name: geoLocation_box
+  name: occupation_box
   properties: {}
   type: TextBox
+- layout_properties: {grid_position: 'BOPUUJ,NMRLVW'}
+  name: label_1_copy_copy_copy_copy
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Geographic Location:', tooltip: '', underline: false, visible: true}
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''geoLocation'']', property: text, writeback: true}
   layout_properties: {grid_position: 'BOPUUJ,TTKYTL'}
-  data_bindings:
-  - {property: text, code: 'self.item[''geoLocation'']', writeback: true}
-- type: Label
-  properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Content:'}
-  name: label_2
-  layout_properties: {grid_position: 'ESBUON,LKKCYX'}
-- type: TextArea
-  properties: {height: 145}
-  name: content_box
-  layout_properties: {grid_position: 'ESBUON,PJCXQE'}
-  data_bindings:
-  - {property: text, code: 'self.item[''content'']', writeback: true}
-- type: Label
-  properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Image:'}
-  name: label_4
-  layout_properties: {grid_position: 'IIFDXJ,PHLUPY'}
-- type: FileLoader
+  name: geoLocation_box
   properties: {}
-  name: image_uploader
-  layout_properties: {grid_position: 'IIFDXJ,PLZGCD'}
+  type: TextBox
+- layout_properties: {grid_position: 'ESBUON,LKKCYX'}
+  name: label_2
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Content:', tooltip: '', underline: false, visible: true}
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''content'']', property: text, writeback: true}
+  layout_properties: {grid_position: 'ESBUON,PJCXQE'}
+  name: content_box
+  properties: {height: 145}
+  type: TextArea
+- layout_properties: {grid_position: 'IIFDXJ,PHLUPY'}
+  name: label_4
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Image:', tooltip: '', underline: false, visible: true}
+  type: Label
+- data_bindings: []
   event_bindings: {change: image_uploader_change}
-  data_bindings: []
+  layout_properties: {grid_position: 'IIFDXJ,PLZGCD'}
+  name: image_uploader
+  properties: {}
+  type: FileLoader
+container:
+  properties: {col_widths: '{"WDVKHL":40,"EMJPBA":15,"YGUNZB":15,"GWUCKG":5}'}
+  type: ColumnPanel
 is_package: true

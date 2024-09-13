@@ -1,70 +1,70 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
 components:
-- type: FlowPanel
-  properties: {}
+- layout_properties: {slot: nav-right}
   name: navbar_links
-  layout_properties: {slot: nav-right}
-- name: content_panel
-  properties: {background: 'theme:Dark Overlay 1', col_widths: '{"BAFZCK":55,"GZYSZF":5,"YGDARZ":35,"DQXRDP":25}'}
-  type: ColumnPanel
-  layout_properties: {slot: default}
-  components:
-  - name: title_copy
+  properties: {}
+  type: FlowPanel
+- components:
+  - layout_properties: {grid_position: 'UVGEQM,BAFZCK'}
+    name: title_copy
     properties:
-      format: restricted_html
       align: center
       content: "    <div style=\"font-family: 'Allura', cursive; font-size: 64px;font-weight: 400;\">\n    <h1 style=\"font-weight: 400; font-size: 48px;\">The Judson Legacy Project</h1>  <h3> Exploring the people, places, and things impacted by the 19th-century missionaries to Burma,\n    </h3> <h3> Ann and Adoniram Judson Jr. </h3>\n    </div>\n    "
+      format: restricted_html
       spacing_above: none
       spacing_below: none
     type: RichText
-    layout_properties: {grid_position: 'UVGEQM,BAFZCK'}
-  - name: editbutton
-    properties: {text: Edit, font_size: 10}
-    type: Button
+  - event_bindings: {click: editbutton_click}
     layout_properties: {grid_position: 'UVGEQM,GZYSZF'}
-    event_bindings: {click: editbutton_click}
-  - name: nav_home
-    properties: {text: Home, bold: true, icon: 'fa:home', foreground: 'theme:On Secondary Container'}
+    name: editbutton
+    properties: {font_size: 10, text: Edit}
     type: Button
+  - event_bindings: {click: nav_home_click}
     layout_properties: {grid_position: 'STMHCM,AZRDMX'}
-    event_bindings: {click: nav_home_click}
-  - name: nav_about
-    properties: {text: About, bold: true, icon: 'fa:info-circle', foreground: 'theme:On Secondary Container'}
+    name: nav_home
+    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:home', text: Home}
     type: Button
+  - event_bindings: {click: nav_about_click}
     layout_properties: {grid_position: 'STMHCM,LPBKOF'}
-    event_bindings: {click: nav_about_click}
-  - name: nav_notations
-    properties: {text: Entries, bold: true, icon: 'fa:th-list', foreground: 'theme:On Secondary Container'}
+    name: nav_about
+    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:info-circle', text: About}
     type: Button
+  - event_bindings: {click: nav_notations_click}
     layout_properties: {grid_position: 'STMHCM,EDZDRS'}
-    event_bindings: {click: nav_notations_click}
-  - name: nav_search
-    properties: {text: Search, bold: true, icon: 'fa:search', foreground: 'theme:On Secondary Container'}
+    name: nav_notations
+    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:th-list', text: Entries}
     type: Button
+  - event_bindings: {click: nav_search_click}
     layout_properties: {grid_position: 'STMHCM,ZPIQZW'}
-    event_bindings: {click: nav_search_click}
-  - name: nav_blog
-    properties: {text: Blog, icon: 'fa:sticky-note', foreground: 'theme:On Secondary Container'}
+    name: nav_search
+    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:search', text: Search}
     type: Button
+  - event_bindings: {click: nav_blog_click}
     layout_properties: {grid_position: 'STMHCM,MIGCMP'}
-    event_bindings: {click: nav_blog_click}
-  - name: label_1
-    properties: {text: ENTRIES, bold: true, align: center, border: 1px solid black}
+    name: nav_blog
+    properties: {foreground: 'theme:On Secondary Container', icon: 'fa:sticky-note', text: Blog}
+    type: Button
+  - layout_properties: {grid_position: 'WUXVGC,EMSSXC'}
+    name: label_1
+    properties: {align: center, bold: true, border: 1px solid black, text: ENTRIES}
     type: Label
-    layout_properties: {grid_position: 'WUXVGC,EMSSXC'}
-  - name: label_result
+  - event_bindings: {show: label_result_show}
+    layout_properties: {grid_position: 'RYXKBP,YGDARZ KBCUTN,MFVLFA'}
+    name: label_result
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'RYXKBP,YGDARZ KBCUTN,MFVLFA'}
-    event_bindings: {show: label_result_show}
-  - name: entries_panel
+  - layout_properties: {grid_position: 'RYXKBP,YGDARZ RHZAUK,WXJTZC'}
+    name: entries_panel
     properties: {item_template: EntryViewOnly}
     type: RepeatingPanel
-    layout_properties: {grid_position: 'RYXKBP,YGDARZ RHZAUK,WXJTZC'}
-  - name: entries_panel1
+  - layout_properties: {grid_position: 'RYXKBP,DQXRDP'}
+    name: entries_panel1
     properties: {item_template: NotationViewOnly}
     type: RepeatingPanel
-    layout_properties: {grid_position: 'RYXKBP,DQXRDP'}
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {background: 'theme:Dark Overlay 1', col_widths: '{"BAFZCK":55,"GZYSZF":5,"YGDARZ":35,"DQXRDP":25}'}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true
