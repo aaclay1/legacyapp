@@ -12,7 +12,8 @@ class HomeForm(HomeFormTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Set the content of the RichText to include a div with the editor-container ID
-   
+ 
+
   def nav_home_click(self, **event_args):
     open_form('HomeForm')
     pass
