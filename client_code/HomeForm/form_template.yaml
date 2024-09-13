@@ -4,11 +4,8 @@ components:
   properties: {}
   type: FlowPanel
 - components:
-  - layout_properties: {grid_position: 'DGTTED,ZZLRXL'}
-    name: image_1
-    properties: {alt_text: Adoniram and Ann Judson, background: '', display_mode: shrink_to_fit, height: 350.33331298828125, source: _/theme/AdoniramAndAnnJudson.jpg, spacing_above: none, spacing_below: none}
-    type: Image
-  - layout_properties: {grid_position: 'DGTTED,TZTOOK'}
+  - event_bindings: {mouse_down: canvas_1_mouse_down}
+    layout_properties: {grid_position: 'ZNWSKQ,FBVLYF'}
     name: canvas_1
     properties: {height: 100}
     type: Canvas
