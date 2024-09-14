@@ -21,7 +21,7 @@ components:
   - event_bindings: {click: nav_about_click}
     layout_properties: {grid_position: 'STMHCM,LPBKOF'}
     name: nav_about
-    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:info-circle', text: About}
+    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:info-circle', text: History}
     type: Button
   - event_bindings: {click: nav_notations_click}
     layout_properties: {grid_position: 'STMHCM,EDZDRS'}
@@ -40,13 +40,14 @@ components:
     type: Button
   - layout_properties: {grid_position: 'QFZHXC,QZYWDP'}
     name: label_1
-    properties: {align: center, bold: true, border: 1px solid black, text: ABOUT}
+    properties: {align: center, bold: true, border: 1px solid black, text: History}
     type: Label
   - layout_properties: {grid_position: 'IJVRHQ,YIUHNS'}
     name: image_1
     properties: {display_mode: fill_width, source: _/theme/Judson_University_sign.png}
     type: Image
-  - layout_properties: {grid_position: 'ZBRLWZ,DQUQHV'}
+  - components: []
+    layout_properties: {grid_position: 'ZBRLWZ,DQUQHV'}
     name: rich_text_1
     properties:
       align: center
@@ -63,6 +64,18 @@ components:
 
 
 
+      format: restricted_html
+    type: RichText
+  - components:
+    - layout_properties: {}
+      name: image_2
+      properties: {display_mode: original_size, height: 586.066650390625, source: _/theme/Screenshot 2024-09-13 212612.png}
+      type: Image
+    layout_properties: {grid_position: 'NZSDMJ,ZEEBPZ'}
+    name: rich_text_2
+    properties:
+      align: center
+      content: "<div style=\"text-align: center; font-size: 20px; font-weight: bold; margin-top: 20px;\">\n  A Short History of the Judson Ministry and Mission<sup>1</sup>\n</div>\n<div style=\"text-align: center; font-size: 16px; margin-bottom: 20px;\">\n  By Jerry B. Cain, Chancellor, Judson University\n</div>\n\n<div style=\"text-align: center; font-size: 14px; margin-bottom: 30px;\">\n  (Originally published in <i>A Nobel Company: Biographical Essays on Notable Particular-Regular Baptists in America, Volume 8</i>, Edited by Terry Wolever. Springfield, MO: Particular Baptist Press, 2016, pp 535-572. Permission is graciously granted to reproduce this article.)\n</div>\n\n<div style=\"text-align: justify; font-size: 14px;\">\n  Adoniram Judson, Jr. was born the year George Washington was elected president of the United States. The new constitution for the United States of Americas had been debated, approved and was being implemented when the lad made his appearance on August 9, 1788, the first child of Adoniram Judson, Sr. and his wife, Abigail (nee Brown) Judson. <br><br>\n  \n  Washington became known as the Father of the United States of America. Adoniram Judson, Jr. became known as the father of the modern mission movement from America. <br><br>\n  \n  Over forty biographies have chronicled the life and ministry of Judson as he and his three wives launched the intentional movement of the gospel from the United States to the uttermost parts of the earth. Judson is, and should be, noted as the first foreign missionary from America. Though that status is sometimes debated, Judson’s influence on the modern mission movement cannot be questioned.\n</div>\n\n<div style=\"font-weight: bold; font-size: 16px; margin-top: 20px;\">\n  Birth and early formation of Adoniram Judson\n</div>\n<div style=\"font-size: 12px; margin-top: 20px; border-top: 1px solid #000; padding-top: 10px;\">\n  <sup>1</sup> Originally published in <i>A Noble Company: Biographical Essays on Notable Particular-Regular Baptists in America, Volume 8</i>, Edited by Terry Wolever. Springfield, MO: Particular Baptist Press, 2016, Pages 535-572, 626-632. Used with gracious permission of Particular Baptist Press.\n</div>\n\n"
       format: restricted_html
     type: RichText
   layout_properties: {slot: default}
