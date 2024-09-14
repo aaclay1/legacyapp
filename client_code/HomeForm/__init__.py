@@ -11,8 +11,8 @@ class HomeForm(HomeFormTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    # Set the content of the RichText to include a div with the editor-container ID
- 
+    self.image_1.width = '100%'  # Set the width to 100% to fill the container
+    self.title.width = '100%'  # Set the width to 100% to fill the container
 
   def nav_home_click(self, **event_args):
     open_form('HomeForm')
@@ -33,3 +33,4 @@ class HomeForm(HomeFormTemplate):
   def nav_blog_click(self, **event_args):
     open_form('BlogForm')
     pass
+

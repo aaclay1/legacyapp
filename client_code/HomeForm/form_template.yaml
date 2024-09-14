@@ -4,84 +4,109 @@ components:
   properties: {}
   type: FlowPanel
 - components:
-  - layout_properties: {grid_position: 'DGTTED,ZZLRXL'}
-    name: image_1
-    properties: {alt_text: Adoniram and Ann Judson, background: '', display_mode: shrink_to_fit, height: 350.33331298828125, source: _/theme/AdoniramAndAnnJudson.jpg, spacing_above: none, spacing_below: none}
-    type: Image
-  - layout_properties: {grid_position: 'DGTTED,TZTOOK'}
-    name: canvas_1
-    properties: {height: 100}
-    type: Canvas
-  - layout_properties: {grid_position: 'ZWZLRO,XEZZPD'}
-    name: title
-    properties:
-      align: center
-      content: "    <div style=\"font-family: 'Allura', cursive; font-size: 64px;font-weight: 400;\">\n    <h1 style=\"font-weight: 400; font-size: 48px;\">The Judson Legacy Project</h1>  <h3> Exploring the people, places, and things impacted by the 19th-century missionaries to Burma,\n    </h3> <h3> Ann and Adoniram Judson Jr. </h3>\n    </div>\n    "
-      format: restricted_html
-      spacing_above: none
-      spacing_below: none
-    type: RichText
+  - components:
+    - layout_properties: {width: 1833.2666015625, x: 7.09375, y: 5.046875}
+      name: image_1
+      properties: {display_mode: zoom_to_fill, height: 580.533203125, source: _/theme/AdoniramAndAnnJudson.jpg, vertical_align: top}
+      type: Image
+    - components: []
+      layout_properties: {width: 1821.8167724609375, x: 0, y: 235.85000610351562}
+      name: title
+      properties:
+        align: center
+        content: "    <div style=\"font-family: 'Allura', cursive;\">\n    <h1 style=\"font-weight: 500; font-size: 90px;\">The Judson Legacy <p>Project</p></h1>  \n\t<h2 style=\"font-weight: 500; font-size: 30px;\"> Exploring the people, places, and things impacted by the 19th-century missionaries to Burma,</h2> \n\t<h2 style=\"font-weight: 500; font-size: 30px;\"> Ann and Adoniram Judson Jr. </h2>\n    </div>"
+        foreground: theme:Tertiary Container
+        format: restricted_html
+        spacing_above: none
+        spacing_below: none
+      type: RichText
+    layout_properties: {full_width_row: true, grid_position: 'YEIKGQ,VREPPK'}
+    name: xy_panel_1
+    properties: {align: right, height: 583.8665771484375, width: null}
+    type: XYPanel
   - event_bindings: {click: nav_home_click}
-    layout_properties: {grid_position: 'FMZVGI,MZYPCY'}
+    layout_properties: {grid_position: 'OGBQIY,QKOAAP'}
     name: nav_home
     properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:home', text: Home}
     type: Button
   - event_bindings: {click: nav_about_click}
-    layout_properties: {grid_position: 'FMZVGI,KTVAQD'}
+    layout_properties: {grid_position: 'OGBQIY,MFKYEL'}
     name: nav_about
-    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:info-circle', text: About}
+    properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:info-circle', text: History}
     type: Button
   - event_bindings: {click: nav_notations_click}
-    layout_properties: {grid_position: 'FMZVGI,MPSWLO'}
+    layout_properties: {grid_position: 'OGBQIY,OGGJDI'}
     name: nav_notations
     properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:th-list', text: Entries}
     type: Button
   - event_bindings: {click: nav_search_click}
-    layout_properties: {grid_position: 'FMZVGI,HLRPCL'}
+    layout_properties: {grid_position: 'OGBQIY,OHFNGF'}
     name: nav_search
     properties: {bold: true, foreground: 'theme:On Secondary Container', icon: 'fa:search', role: null, text: Search}
     type: Button
   - event_bindings: {click: nav_blog_click}
-    layout_properties: {grid_position: 'FMZVGI,XAOHJO'}
+    layout_properties: {grid_position: 'OGBQIY,MVRNNE'}
     name: nav_blog
     properties: {foreground: 'theme:On Secondary Container', icon: 'fa:sticky-note', text: Blog}
     type: Button
-  - layout_properties: {grid_position: 'JPWEPG,ARTHGW'}
+  - layout_properties: {grid_position: 'QWSFWK,ECSAIT'}
     name: label_1
     properties: {align: center, bold: true, border: 1px solid black, text: HOME}
     type: Label
-  - components:
-    - components:
-      - layout_properties: {}
-        name: image_2
-        properties: {display_mode: original_size, height: 285.39996337890625, source: _/theme/Jerry.png}
-        type: Image
-      - layout_properties: {}
-        name: rich_text_3
-        properties: {align: center, content: '<p><span style="font-family:georgia,serif;"><span font-size: 16px; text-align: center; >My interest in the Judson name began toward the end of the last century when I became president at Judson University in Illinois. Once I encountered the name of Ann and Adoniram Judson I experienced the Yellow Volkswagen syndrome in which people tend to see a particular thing everywhere after noticing it for the first time. Everywhere I looked I saw the name Judson and soon became mesmerized by the abundant notations on this legendary missionary couple.</span></span></p>', format: restricted_html}
-        type: RichText
-      layout_properties: {}
-      name: rich_text_1
-      properties: {align: center, content: '<h2><p><span style="font-family:georgia,serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-weight: bolder;">The Compiler: Jerry Cain</span></span></span></p></h2>', format: restricted_html}
-      type: RichText
-    layout_properties: {grid_position: 'EMUPAR,UIWKKM'}
+  - components: []
+    layout_properties: {grid_position: 'YUVURW,XDMYLL'}
     name: rich_text_2
     properties:
-      content: |2-
-
-                    <p>This website collects and displays information on the persons, places, and things that have been named in honor of Ann and/or Adoniram Judson, Baptist missionaries who served in Burma 1813-1850. The compiler is Jerry Cain who can be contacted at <a href="mailto:TheJudsonLegacy@gmail.com">TheJudsonLegacy@gmail.com</a>.</p>
-
-                <h4>Sponsors</h4>
-                <p>Sponsors are two institutions from the list of over 300 namesakes for these pioneers of the modern missionary movement:</p>
+      align: left
+      content: |-
+        <div style="font-family:georgia,serif;font-size: 18px;">
+        <p>This website collects and displays information on the persons, places, and things that have been named in honor of Ann and/or Adoniram Judson, Baptist missionaries who served in Burma 1813-1850. The compiler is Jerry Cain who can be contacted at <a href="mailto:TheJudsonLegacy@gmail.com">TheJudsonLegacy@gmail.com</a>.</p>
+          <h3 style="text-align: center;">Sponsors</h3>
+          <p>Sponsors are two institutions from the list of over 300 namesakes for these pioneers of the modern missionary movement:</p>
                 <ul>
                     <li>Judson University, Elgin, Illinois. <a href="https://www.judsonu.edu">Judsonu.edu</a></li>
                     <li>Judson Press, King of Prussia, Pennsylvania. <a href="https://www.judsonpress.com">Judsonpress.com</a></li>
                 </ul>
+        </div>
+      format: restricted_html
+    type: RichText
+  - layout_properties: {grid_position: 'QYEEHU,BNCPKL'}
+    name: rich_text_4
+    properties: {align: center, content: <h2>The Clossman Images</h2>, format: restricted_html}
+    type: RichText
+  - layout_properties: {grid_position: 'ZMKQGY,XHMCAP'}
+    name: rich_text_5
+    properties:
+      align: center
+      content: |-
+        <div style="font-family:georgia,serif;font-size: 18px;">
+        <p>A proud native of Ohio, the Rev. Dr. Richard Hunter Clossman (1928-2019) taught history at Judson University 1972-1997.  One of his hobbies was collecting images that were used in church-related literature of the nineteenth century to tell the Judson story. The visual imagery of these pioneering missionaries was not recorded through pixels and technology but with pencils on sketch pads capturing the highs and lows of this couple called to the other side of the globe.  Dr. Clossman's images are in my care and I will eagerly use them in this modern medium just as they were used 200 years ago.  We express thanks to Dr. Clossman and his family for entrusting this treasure to <b>The Judson Legacy Project</b>.  Attributions and explanations will appear throughout this website.</p>
+        </div>
+      format: restricted_html
+    type: RichText
+  - components: []
+    layout_properties: {grid_position: 'QCXZSU,JZJZGG'}
+    name: rich_text_1
+    properties: {align: center, content: '<h2><p><span style="font-family:georgia,serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-weight: bolder;">The Compiler: Jerry Cain</span></span></span></p></h2>', format: restricted_html}
+    type: RichText
+  - layout_properties: {grid_position: 'DALWSM,LWBJNI'}
+    name: image_2
+    properties: {display_mode: original_size, height: 285.39996337890625, source: _/theme/Jerry.png}
+    type: Image
+  - components: []
+    layout_properties: {grid_position: 'GWXPWA,HOLAUI'}
+    name: rich_text_3
+    properties:
+      align: center
+      content: |-
+        <div style="font-family:georgia,serif;font-size: 18px;">
+        <p><span style="font-family:georgia,serif;"><span font-size: 16px; text-align: center; >My interest in the Judson name began toward the end of the last century when I became president at Judson University in Illinois. Once I encountered the name of Ann and Adoniram Judson I experienced the Yellow Volkswagen syndrome in which people tend to see a particular thing everywhere after noticing it for the first time. Everywhere I looked I saw the name Judson and soon became mesmerized by the abundant notations on this legendary missionary couple.</span></span></p>
+        </div>
       format: restricted_html
     type: RichText
   layout_properties: {slot: default}
   name: content_panel
-  properties: {background: 'theme:Dark Overlay 1', col_widths: '{"MZYPCY":15,"KTVAQD":15,"MPSWLO":15,"HLRPCL":15}', role: outlined-card}
+  properties: {background: 'theme:Dark Overlay 1', col_widths: '{}', role: outlined-card}
   type: ColumnPanel
 container:
   properties: {html: '@theme:standard-page.html'}
